@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Tech, Project, Footer } from './components/incl';
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi, My name is <br/> <span className="banner-name">John Atan</span> <br/> I build things for web
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" className="App-logo" alt="logo" />
       </header>
+      <Tech />
+      <Project />
+      <Footer />
     </div>
   );
 }

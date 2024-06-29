@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(271deg, #a25de2, #f7f7f7);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 29s ease infinite;
+  -moz-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+.App-header {
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  font-family: "Poppins", sans-serif;
+}
+
+.App-header p {
+  color: black;
+  font-weight: 700;
+  font-size: 58px;
+  color: #42446e;
+}
+.App-header img {
+  display: flex;
+  max-width: 349px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  border-radius: 50%;
+  box-shadow: 5px 2px 5px rgb(0, 0, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar  */
+.navbar {
   display: flex;
-  flex-direction: column;
+  padding: 15px;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  /* background-color: linear-gradient(to left, #722ae1, #7939e7, #7f46ed, #8652f3, #8d5ef9); */
+  background-color: rgb(251, 234, 255, 0.8);
+}
+
+.navbar h2 {
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  color: blueviolet;
+}
+.navbar ul {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  margin: auto;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links li {
+  text-align: center;
+  margin: 5px;
+  padding-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links li img {
+  text-align: center;
+  margin: 0;
+}
+.nav-links li:hover {
+  color: #8a2be2;
+  cursor: pointer;
+}
+
+.nav-icons {
+  display: inline-block;
+  align-items: center;
+  justify-content: end;
+  padding-left: 3px;
+}
+
+.banner-name {
+  color: blueviolet;
+}
+
+/* Tech Stack */
+.techstack {
+  color: #42446e;
+  text-align: center;
+  height: 100%;
+  margin-bottom: 20rem;
+}
+.techstack h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 26px;
+}
+.techstack p {
+  font-size: 32px;
+  line-height: 26px;
+}
+
+.techstack ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+
+.techstack li img {
+  width: 120px;
+  height: 120px;
+}
+
+.techstack li {
+  align-items: center;
+  margin: 1.5em;
+}
+
+/* Project */
+.project {
+  color: #42446e;
+  text-align: center;
+  height: 100%;
+}
+.project h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 26px;
+}
+.project p {
+  font-size: 32px;
+  line-height: 26px;
+}
+
+/* Card styling */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 373px;
+  width: 100%;
+  height: 567px;
+  margin: 20px;
+  transition: transform 0.3s;
+}
+
+.card-img {
+  width: 100%;
+  max-width: 375px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin: 10px 0;
+  font-size: 28px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.card .card-body .card-text {
+  font-size: 18px;
+  color: #555;
+  margin: 10px;
+  text-align: start;
+  font-weight: 200;
+}
+
+.card .card-body .card-tech {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #888;
+}
+.tech-title {
+  font-size: 16px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-links a {
+  color: #000000;
+}
+.card-links a:hover {
+  color: blueviolet;
+}
+.card .card-body .card-links-icon {
+  padding-right: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(251, 234, 255, 0.8);
+}
+.hr-custom {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.footer-icons {
+  display: flex;
+  list-style: none;
+}
+.footer-icons li {
+  padding: 0.3rem;
+  font-size: 1.5em;
+}
+.icon-footer {
+  color: #000000;
+}
+.footer-below {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-links a {
+  text-decoration: none;
+}
+.footer-below .footer-links li {
+  display: flex;
+  list-style: none;
+  margin: 0 1rem;
+}
+.love {
+  color: red;
+  font-size: 1.2em;
 }

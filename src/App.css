@@ -92,8 +92,6 @@ html {
 }
 
 .navbar.scrolled {
-  /* background-color: rgba(255, 255, 255, 0.7); */
-  /* background-color: linear-gradient(to left, #722ae1, #7939e7, #7f46ed, #8652f3, #8d5ef9); */
   background-color: rgb(251, 234, 255, 0.8);
 }
 
@@ -112,19 +110,24 @@ html {
   margin: auto;
   align-items: center;
   justify-content: center;
+  
+}
+.nav-items {
+  text-decoration: none;
+  color: #000000;
 }
 
 .nav-links li {
   text-align: center;
   margin: 5px;
-  padding-left: 10px;
+  text-decoration: none;
 }
 
 .nav-links li img {
   text-align: center;
   margin: 0;
 }
-.nav-links li:hover {
+.nav-links .nav-items:hover {
   color: #8a2be2;
   cursor: pointer;
 }
@@ -146,6 +149,7 @@ html {
   text-align: center;
   height: 100%;
   margin-bottom: 20rem;
+  margin-top: 8rem;
 }
 .techstack h1 {
   font-weight: bold;

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import GithubIcon from "../icons/github-icon.svg";
-import UpworkIcon from "../icons/upwork.svg";
 import "../../App.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import DarkMode from './DarkMode';
 
 function NavToolbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,28 +30,29 @@ function NavToolbar() {
         </h2>
         <ul className="nav-links">
           <li>
-            <Link to="/" className="nav-items">
+            <NavLink to="/" className="nav-items">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/techstacks" className="nav-items">
+            <NavLink to="/techstacks" className="nav-items">
               Tech Stacks
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/projects" className="nav-items">
+            <NavLink to="/projects" className="nav-items">
               Projects
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="nav-items">
+            <NavLink to="/contact" className="nav-items">
               Contact
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <img className="nav-icons" src={GithubIcon} alt="github-icon" />
-            <img className="nav-icons" src={UpworkIcon} alt="upwork-icon" />
+            {/* <img className="nav-icons" src={GithubIcon} alt="github-icon" />
+            <img className="nav-icons" src={UpworkIcon} alt="upwork-icon" /> */}
+            <DarkMode />
           </li>
         </ul>
       </div>

@@ -89,6 +89,10 @@ nav {
   position: sticky;
   top: 0;
 }
+nav a.active {
+  color: blueviolet;
+}
+
 .navbar {
   display: flex;
   padding: 15px;

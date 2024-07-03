@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
 import { NavLink } from "react-router-dom";
-import DarkMode from './DarkMode';
+import DarkMode from "./DarkMode";
 
 function NavToolbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,18 +22,25 @@ function NavToolbar() {
     };
   }, []);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
   return (
     <nav>
       <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <h2 className="nav-brand">
-          John Atan
+          <NavLink to="/">John Atan</NavLink>
         </h2>
-        <ul className="nav-links">
-          <li>
-            <NavLink to="/" className="nav-items">
-              Home
-            </NavLink>
-          </li>
+
+        <div className="menu" onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={menuOpen ? "open" : ""}>
           <li>
             <NavLink to="/techstacks" className="nav-items">
               Tech Stacks
@@ -50,8 +57,11 @@ function NavToolbar() {
             </NavLink>
           </li>
           <li>
-            {/* <img className="nav-icons" src={GithubIcon} alt="github-icon" />
-            <img className="nav-icons" src={UpworkIcon} alt="upwork-icon" /> */}
+            <NavLink to="/about" className="nav-items">
+              About
+            </NavLink>
+          </li>
+          <li>
             <DarkMode />
           </li>
         </ul>

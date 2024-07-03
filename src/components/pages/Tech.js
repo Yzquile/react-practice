@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 const CustomIcon = ({ icon }) => {
   if (icon) {
-    return <Icon icon={icon} width="120px" height="120px" />;
+    return <Icon icon={icon} max-width="120px" height="120px"/>;
   }
 };
 

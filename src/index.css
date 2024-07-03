@@ -1,8 +1,8 @@
 :root {
-  --body_background: #8EC5FC;
+  --body_background: #8ec5fc;
   --body_color: black;
   --title_color: #42446e;
-  --bg-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  --bg-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 }
 
 [data-theme="dark"] {
@@ -17,9 +17,9 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, 'Poppins', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, "Poppins", BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--body_background);
@@ -31,8 +31,107 @@ body {
   color: var(--body_color);
 }
 
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Media query */
+@media (max-width: 768px) {
+  nav .menu {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+  }
+
+  nav .menu span {
+    height: 0.4rem;
+    width: 100% !important;
+    background-color: #fff;
+    border-radius: 0.2rem;
+    color: var(--body_color);
+  }
+
+  nav ul {
+    display: none !important;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    background-color: var(--body_background);
+  }
+
+  nav ul.open {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    margin-top: 2.5rem;
+  }
+
+  nav ul.open li {
+    color: var(--title_color);
+  }
+
+  nav .nav-brand {
+    position: absolute;
+    left: 0.5rem;
+  }
+  
+  nav .nav-brand {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    color: blueviolet;
+    text-decoration: none;
+  }
+
+  nav .navbar.scrolled {
+    display: none;
+  }
+
+  .App-header {
+    flex-direction: column-reverse;
+  }
+
+  .pre-footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pre-footer-icons {
+    padding: 0;
+  }
+
+  .pre-footer-icons li a {
+    display: flex;
+    margin: auto;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    margin-bottom: 0.2rem;
+    padding: 0;
+  }
+
+  .footer-links a {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-below {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card .card-links-item {
+    text-align: center;
+  }
+
+  .techstack li {
+    width: 100%;
+  }
 }

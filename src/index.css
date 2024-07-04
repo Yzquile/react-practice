@@ -14,9 +14,13 @@
 
 * {
   transition: all 0.3s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-  margin: 0;
+  
   font-family: -apple-system, "Poppins", BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -47,6 +51,7 @@ code {
     justify-content: space-between;
     width: 2.25rem;
     height: 2rem;
+    
   }
 
   nav .menu span {
@@ -64,6 +69,8 @@ code {
     width: 100%;
     margin-bottom: 0.25rem;
     background-color: var(--body_background);
+    margin: 0;
+    padding: 0;
   }
 
   nav ul.open {
@@ -95,6 +102,9 @@ code {
     display: none;
   }
 
+  .App {
+    margin-top: 2.5rem;
+  }
   .App-header {
     flex-direction: column-reverse;
   }

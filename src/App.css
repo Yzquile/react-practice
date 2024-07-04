@@ -1,13 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-html {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-}
+
+
 .App-header {
   min-height: 90vh;
   width: 100%;
@@ -37,10 +31,14 @@ html {
   box-shadow: 5px 2px 5px rgb(0, 0, 0, 0.5);
 }
 
+h1 {
+  margin: 2rem;
+}
 /* Navbar  */
 nav {
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 nav a.active {
   color: blueviolet;
@@ -52,10 +50,20 @@ nav .navbar {
   font-weight: 500;
   background: transparent;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav .navbar.scrolled {
-  background-color: rgb(251, 234, 255, 0.8);
+  background-color: rgb(251, 234, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+nav .navbar.scrolled ul li a{
+  color: #1e2042;
+  font-weight: bold;
+}
+nav .navbar.scrolled ul li a.active{
+  color: blueviolet;
+  font-weight: bold;
 }
 
 nav .nav-brand {

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../App.css";
 import { Icon } from "@iconify/react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const Card = ({ image, title, description, techStack, liveLink, codeLink }) => {
+  useEffect (() => {
+    Aos.init();
+  })
   return (
-    <div className="card">
+    <div className="card" data-aos="flip-right" data-aos-duration="1000">
       <img src={image} alt={title} className="card-img" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
@@ -94,8 +99,8 @@ function Project() {
 
   return (
     <div className="project">
-      <h1>Projects</h1>
-      <p>Things I’ve built so far</p>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">Projects</h1>
+      <p data-aos="zoom-in" data-aos-duration="1000">Things I’ve built so far</p>
       <div className="card-container">
         {cards.map((card, index) => (
           <Card

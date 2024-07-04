@@ -1,11 +1,12 @@
 import React from "react";
 import "../../App.css";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const api_key = process.env.REACT_APP_WEB3_API_KEY;
 
 function Contact() {
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -29,13 +30,13 @@ function Contact() {
       Swal.fire({
         title: "Success!",
         text: "Message sent successfully!",
-        icon: "success"
+        icon: "success",
       });
     }
   };
 
   return (
-    <section className="contact">
+    <section className="contact" data-aos="fade-up" data-aos-duration="1000">
       <h1>My Contact Page</h1>
       <form onSubmit={onSubmit}>
         <h2>Contact Form</h2>

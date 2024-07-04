@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../App.css";
 import { Tech, Project, Footer } from "../incl/";
 import { Icon } from "@iconify/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <p data-aos="fade-left" data-aos-duration="1000">
           Hi, My name is <br /> <span className="banner-name">John Atan</span>{" "}
           <br /> I build things for web
         </p>
@@ -15,6 +21,8 @@ function Home() {
           src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
           className="App-logo"
           alt="logo"
+          data-aos="fade-right"
+          data-aos-duration="1000"
         />
       </header>
       <Tech />

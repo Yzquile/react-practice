@@ -1,8 +1,7 @@
 import React from "react";
 import "../../App.css";
 import Swal from "sweetalert2";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { SectionHeading } from "../incl";
 
 const api_key = process.env.REACT_APP_WEB3_API_KEY;
 
@@ -26,7 +25,6 @@ function Contact() {
     }).then((res) => res.json());
 
     if (res.success) {
-      // console.log("Success", res);
       Swal.fire({
         title: "Success!",
         text: "Message sent successfully!",
@@ -36,8 +34,8 @@ function Contact() {
   };
 
   return (
-    <section className="contact" data-aos="fade-up" data-aos-duration="1000">
-      <h1>My Contact Page</h1>
+    <section className="contact" data-aos="fade-up" data-aos-duration="1000" >
+      <SectionHeading title="My Contact Page" />
       <form onSubmit={onSubmit}>
         <h2>Contact Form</h2>
         <p>Fill up the form below to send me a message.</p>

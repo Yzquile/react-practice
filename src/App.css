@@ -163,12 +163,12 @@ nav ul .nav-items:hover {
   height: 100%;
   margin-top: 6rem;
 }
-.project h1 {
+.section-heading h1 {
   font-weight: bold;
   font-size: 48px;
   line-height: 26px;
 }
-.project p {
+.section-heading p {
   font-size: 32px;
   line-height: 26px;
 }

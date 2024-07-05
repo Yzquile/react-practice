@@ -3,6 +3,7 @@ import "../../App.css";
 import { Icon } from "@iconify/react";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import { SectionHeading } from "../incl";
 
 const Card = ({ image, title, description, techStack, liveLink, codeLink }) => {
   useEffect (() => {
@@ -99,8 +100,7 @@ function Project() {
 
   return (
     <div className="project">
-      <h1 data-aos="zoom-in" data-aos-duration="1000">Projects</h1>
-      <p data-aos="zoom-in" data-aos-duration="1000">Things I’ve built so far</p>
+      <SectionHeading title="Project" subtitle="Things I’ve built so far" dataAos="zoom-in" dataAosDuration="1000"/>
       <div className="card-container">
         {cards.map((card, index) => (
           <Card
